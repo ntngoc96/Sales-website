@@ -19,7 +19,7 @@ import {
   DropdownItem,
 } from 'reactstrap';
 
-import EachItem from './Item';
+import { Item as EachItem } from '../Item/index';
 
 const PRODUCTTYPE = new Map();
 PRODUCTTYPE.set(1, 'food');
@@ -31,7 +31,7 @@ SCREENTYPE.set('landscape_phones', 576);
 SCREENTYPE.set('tablets', 768);
 SCREENTYPE.set('desktops', 992);
 SCREENTYPE.set('large_desktops', 1400);
-export default class ListItems extends React.Component {
+export class ListItems extends React.Component {
   constructor() {
     super();
 
@@ -195,7 +195,7 @@ export default class ListItems extends React.Component {
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggleNav('1'); }}
             >
-              Logo
+              Tất cả dịch vụ
                         </NavLink>
           </NavItem>
           <NavItem>
@@ -203,7 +203,7 @@ export default class ListItems extends React.Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggleNav('2'); }}
             >
-              Sản phẩm nổi bật
+              Filler
                         </NavLink>
           </NavItem>
           <NavItem>
@@ -211,7 +211,7 @@ export default class ListItems extends React.Component {
               className={classnames({ active: this.state.activeTab === '3' })}
               onClick={() => { this.toggleNav('3'); }}
             >
-              Thức uống
+              Botox
                         </NavLink>
           </NavItem>
           <NavItem>
@@ -219,7 +219,7 @@ export default class ListItems extends React.Component {
               className={classnames({ active: this.state.activeTab === '4' })}
               onClick={() => { this.toggleNav('4'); }}
             >
-              Đồ ăn
+              Truyền trắng
                         </NavLink>
           </NavItem>
           <NavItem>

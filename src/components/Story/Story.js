@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Story1 from '../image/story_1.jpg';
-import Video_mp4 from '../image/video2.mov';
+import Story1 from '../../image/story_1.jpg';
+import Video_mp4 from '../../image/video2.mov';
 // import Video_webm from '../image/video.webm';
-export default function Story() {
+export function Story() {
   return (
     <div>
       <div class="bg-video">

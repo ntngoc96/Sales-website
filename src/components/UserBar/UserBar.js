@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Example extends React.Component {
+export  class UserBar extends React.Component {
   render() {
     return (
       <Container>

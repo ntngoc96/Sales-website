@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 
-import logo from '../image/logo.png';
+import logo from '../../image/logo.png';
 
-export default class Example extends React.Component {
+export class NavBar extends React.Component {
   render() {
     return (
       <Container>

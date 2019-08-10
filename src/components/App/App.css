@@ -110,6 +110,15 @@ body{
     .section-stories {
       padding: 2.5rem 0; } }
 
+.section-all-product{
+  background-color: #94cdcb85;
+}
+
+.section-certificate{
+  background-image: url('../../image/10858.jpg');
+  background-size:cover;
+  background-position: center;
+}
 /* HOMEPAGE */
 .footer{
   padding:2rem 1.5rem;
@@ -184,6 +193,17 @@ body{
 
 .u-text-decoration-linethough{
   text-decoration: line-through;
+}
+
+.item__price{
+  padding:0 1rem;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.item__price > * {
+  padding: .5rem;
 }
 
 /* Footer Component */

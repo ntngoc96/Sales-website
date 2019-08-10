@@ -3,11 +3,11 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import Item from './Item';
+import { Item } from '../Item/index';
 
-import { responsive } from '../config';
+import { responsive } from '../../config';
 
-export default class MultipleItem extends React.Component {
+export class New extends React.Component {
   constructor() {
     super();
 

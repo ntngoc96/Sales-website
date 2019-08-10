@@ -2,13 +2,13 @@ import React from 'react';
 import Axios from 'axios';
 
 
-import UserBar from '../components/UserBar';
-import NavBar from '../components/NavBar';
-import Featured from '../components/Featured';
-import New from '../components/New';
-import ListItems from '../components/ListItems';
-import Story from '../components/Story';
-import Footer from '../components/Footer';
+import { UserBar } from '../components/UserBar/';
+import { NavBar } from '../components/NavBar/';
+import { Featured } from '../components/Featured/';
+import { New } from '../components/New/';
+import { ListItems } from '../components/ListItems/';
+import { Story } from '../components/Story/';
+import { Footer } from '../components/Footer/';
 
 import certificate from "../image/certificate.jpg";
 
@@ -48,13 +48,14 @@ export default class Home extends React.Component {
           <h1 >Dịch vụ mới</h1>
           <New Items={Items} />
         </section>
-        <section className="section-certificate">
-          <h1>Chứng chỉ</h1>
-          <img src={certificate} width="50%" alt="certificate" />
-        </section>
         <section className="section-all-product">
           <h1 >Tất cả dịch vụ </h1>
           <ListItems Items={Items} />
+        </section>
+        <section className="section-certificate">
+          <h1>Chứng chỉ</h1>
+          <img src={certificate} width="40%" alt="certificate" />
+          <img src={certificate} width="40%" alt="certificate" />
         </section>
         <section className="section-stories">
           <h1>Cảm nhận khách hàng</h1>

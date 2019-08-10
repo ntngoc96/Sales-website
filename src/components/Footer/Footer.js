@@ -6,7 +6,7 @@ import {
   Input,
 } from 'reactstrap';
 
-export default function Footer() {
+export function Footer() {
   return (
     <div>
       <Row >
