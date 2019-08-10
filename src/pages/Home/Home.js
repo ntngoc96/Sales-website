@@ -2,17 +2,14 @@ import React from 'react';
 import Axios from 'axios';
 
 
-import { UserBar } from '../components/UserBar/';
-import { NavBar } from '../components/NavBar/';
-import { Featured } from '../components/Featured/';
-import { New } from '../components/New/';
-import { ListItems } from '../components/ListItems/';
-import { Story } from '../components/Story/';
-import { Footer } from '../components/Footer/';
+import { Featured } from '../../components/Featured';
+import { New } from '../../components/New';
+import { ListItems } from '../../components/ListItems';
+import { Story } from '../../components/Story';
 
-import certificate from "../image/certificate.jpg";
+import certificate from "../../image/certificate.jpg";
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
   constructor() {
     super();
 
@@ -37,10 +34,6 @@ export default class Home extends React.Component {
     const { Items } = this.state;
     return (
       <div>
-        <header>
-          <UserBar />
-          <NavBar />
-        </header>
         <section className="section-banner">
           <Featured />
         </section>
@@ -62,9 +55,6 @@ export default class Home extends React.Component {
           <div className="u-margin-bottom-big">Cảm nhận khách hàng sau khi sử dụng dịch vụ của MiuMiu Beauty </div>
           <Story />
         </section>
-        <footer className="footer">
-          <Footer />
-        </footer>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
-
+import { Container, Row, Col, Nav, NavItem, NavLink as NavLinkReactStrap } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import logo from '../../image/logo.png';
 
 export class NavBar extends React.Component {
@@ -18,19 +18,34 @@ export class NavBar extends React.Component {
           <Col xs="auto" className="font-weight-bold">
             <Nav>
               <NavItem>
-                <NavLink href="#">Trang chủ</NavLink>
+                <NavLinkReactStrap>
+                  <NavLink to="/">Trang chủ</NavLink>
+                </NavLinkReactStrap>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Giới thiệu</NavLink>
+                <NavLinkReactStrap>
+                  <NavLink to="/introduction">Giới thiệu</NavLink>
+                </NavLinkReactStrap>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Sản phẩm</NavLink>
+                <NavLinkReactStrap>
+                  <NavLink to="/product">Sản phẩm</NavLink>
+                </NavLinkReactStrap>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Tin tức</NavLink>
+                <NavLinkReactStrap>
+                  <NavLink to="/news">Tin tức</NavLink>
+                </NavLinkReactStrap>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Liên hệ</NavLink>
+                <NavLinkReactStrap>
+                  <NavLink to="/promotion">Khuyến mãi</NavLink>
+                </NavLinkReactStrap>
+              </NavItem>
+              <NavItem>
+                <NavLinkReactStrap>
+                  <NavLink to="/contact">Liên hệ</NavLink>
+                </NavLinkReactStrap>
               </NavItem>
             </Nav>
           </Col>
