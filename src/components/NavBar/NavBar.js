@@ -18,34 +18,34 @@ export class NavBar extends React.Component {
           <Col xs="auto" className="font-weight-bold">
             <Nav>
               <NavItem>
-                <NavLinkReactStrap>
+                
                   <NavLink to="/">Trang chủ</NavLink>
-                </NavLinkReactStrap>
+                
               </NavItem>
               <NavItem>
-                <NavLinkReactStrap>
+                
                   <NavLink to="/introduction">Giới thiệu</NavLink>
-                </NavLinkReactStrap>
+                
               </NavItem>
               <NavItem>
-                <NavLinkReactStrap>
+                
                   <NavLink to="/product">Sản phẩm</NavLink>
-                </NavLinkReactStrap>
+                
               </NavItem>
               <NavItem>
-                <NavLinkReactStrap>
+                
                   <NavLink to="/news">Tin tức</NavLink>
-                </NavLinkReactStrap>
+                
               </NavItem>
               <NavItem>
-                <NavLinkReactStrap>
+                
                   <NavLink to="/promotion">Khuyến mãi</NavLink>
-                </NavLinkReactStrap>
+                
               </NavItem>
               <NavItem>
-                <NavLinkReactStrap>
-                  <NavLink to="/contact">Liên hệ</NavLink>
-                </NavLinkReactStrap>
+                
+                  <NavLink to="/add-product">Liên hệ</NavLink>
+                
               </NavItem>
             </Nav>
           </Col>

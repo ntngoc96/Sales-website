@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 import { Home } from '../../pages/Home/';
@@ -10,6 +10,7 @@ import { Introduction } from '../../pages/Introduction';
 import { News } from '../../pages/News';
 import { Product } from '../../pages/Product';
 import { Promotion } from '../../pages/Promotion';
+import { AddProduct } from '../../pages/AddProduct';
 
 import { UserBar } from '../../components/UserBar';
 import { NavBar } from '../../components/NavBar';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/news" component={News} />
           <Route path="/product" component={Product} />
           <Route path="/promotion" component={Promotion} />
+          <Route path="/add-product" component={AddProduct} />
         </main>
         <footer className="footer">
           <Footer />

@@ -30,10 +30,10 @@ export function Footer() {
         <Col sm="4" md="3" lg="3" xs="6">
           <div className="footer__logo m-auto">Cái logo ở đây</div>
           <div className="footer__list-social-network text-center">
-            <i class="footer__list-social-network--item fab fa-facebook-square"></i>
-            <i class="footer__list-social-network--item fab fa-instagram"></i>
-            <i class="footer__list-social-network--item fab fa-google-plus-square"></i>
-            <i class="footer__list-social-network--item fab fa-twitter-square"></i>
+            <i className="footer__list-social-network--item fab fa-facebook-square"></i>
+            <i className="footer__list-social-network--item fab fa-instagram"></i>
+            <i className="footer__list-social-network--item fab fa-google-plus-square"></i>
+            <i className="footer__list-social-network--item fab fa-twitter-square"></i>
           </div>
         </Col>
         <Col sm="4" md="3" lg="3" xs="6">

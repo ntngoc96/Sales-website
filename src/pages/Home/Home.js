@@ -7,6 +7,7 @@ import { New } from '../../components/New';
 import { ListItems } from '../../components/ListItems';
 import { Story } from '../../components/Story';
 
+
 import certificate from "../../image/certificate.jpg";
 
 export class Home extends React.Component {
