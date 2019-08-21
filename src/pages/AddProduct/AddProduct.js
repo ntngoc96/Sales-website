@@ -53,8 +53,6 @@ class AddProduct extends Component {
     
   }
   render() {
-
-
     return (
       <Container>
         <Prompt

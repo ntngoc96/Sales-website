@@ -20,7 +20,7 @@ export class Home extends React.Component {
   }
 
   componentDidMount() {
-    Axios.get('/products').then(response => {
+    Axios.get('/api/all').then(response => {
       const { data: Items } = response;
       this.setState(() => ({
         Items,

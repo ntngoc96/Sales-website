@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://l5f0k.sse.codesandbox.io",
+  "proxy": "https://ginjr.sse.codesandbox.io",
   "eslintConfig": {
     "extends": "react-app"
   },
