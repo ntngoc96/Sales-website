@@ -6,22 +6,22 @@ import Video_mp4 from '../../image/video2.mov';
 export function Story() {
   return (
     <div>
-      <div class="bg-video">
-        <video class="bg-video__content" autoPlay muted loop>
+      <div className="bg-video">
+        <video className="bg-video__content" autoPlay muted loop>
           <source src={Video_mp4} type="video/mp4" />
           Browser not support for this video!!!
         </video>
       </div>
       <div className="story__row">
-        <div class="story">
-          <figure class="story__shape">
-            <img src={Story1} alt="" class="story__img" />
-            <figcaption class="story__caption">
+        <div className="story">
+          <figure className="story__shape">
+            <img src={Story1} alt="" className="story__img" />
+            <figcaption className="story__caption">
               ngân lê
                             </figcaption>
           </figure>
-          <div class="story__text">
-            <h3 class="heading-tertiary">
+          <div className="story__text">
+            <h3 className="heading-tertiary">
               Giờ thì tôi có thể tự tin mọi lúc
             </h3>
             <p>
@@ -33,15 +33,15 @@ export function Story() {
         </div>
       </div>
       <div className="story__row">
-        <div class="story">
-          <figure class="story__shape">
-            <img src={Story1} alt="" class="story__img" />
-            <figcaption class="story__caption">
+        <div className="story">
+          <figure className="story__shape">
+            <img src={Story1} alt="" className="story__img" />
+            <figcaption className="story__caption">
               ngân lê
           </figcaption>
           </figure>
-          <div class="story__text">
-            <h3 class="heading-tertiary">
+          <div className="story__text">
+            <h3 className="heading-tertiary">
               Wow! my life is completely different now
           </h3>
             <p>

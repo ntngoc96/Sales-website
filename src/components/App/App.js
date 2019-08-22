@@ -15,6 +15,9 @@ import { AddProduct } from '../../pages/AddProduct';
 import { UserBar } from '../../components/UserBar';
 import { NavBar } from '../../components/NavBar';
 import { Footer } from '../../components/Footer';
+import { Register } from '../../pages/Register';
+import { Login } from '../../pages/Login';
+import { PrivateRoute } from '../../auth/PrivateRoute';
 
 
 function App() {
@@ -32,7 +35,9 @@ function App() {
           <Route path="/news" component={News} />
           <Route path="/product" component={Product} />
           <Route path="/promotion" component={Promotion} />
-          <Route path="/add-product" component={AddProduct} />
+          <PrivateRoute path="/add-product" component={AddProduct} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
         </main>
         <footer className="footer">
           <Footer />

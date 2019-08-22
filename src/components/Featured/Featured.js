@@ -11,7 +11,7 @@ import Slide_1 from '../../image/featured_1.jpg';
 import Slide_2 from '../../image/featured_2.jpg';
 import Slide_3 from '../../image/featured_3.jpg';
 import Slide_4 from '../../image/featured_4.jpg';
-import Slide_5 from '../../image/featured_2.jpg';
+import Slide_5 from '../../image/featured_5.jpg';
 
 const items = [
   {

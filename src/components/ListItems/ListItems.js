@@ -246,8 +246,8 @@ export class ListItems extends React.Component {
               {
                 TotalCurrentItems !== 0
                 && CurrentItems.map((Item, index) =>
-                  <Col sm="4" md="3" lg="3" xs="6" className="px-3 my-1">
-                    <EachItem {...Item} key={Item._id} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
+                  <Col sm="4" md="3" lg="3" xs="6" key={Item._id} className="px-3 my-1">
+                    <EachItem {...Item} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
                       onProductClicked={this.onProductClicked} />
                   </Col>)
               }
@@ -258,8 +258,8 @@ export class ListItems extends React.Component {
               {
                 TotalCurrentItems !== 0
                 && CurrentItems.map((Item, index) =>
-                  <Col sm="4" md="3" lg="3" xs="6" className="px-3 my-1">
-                    <EachItem {...Item} key={Item._id} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
+                  <Col sm="4" md="3" lg="3" xs="6" key={Item._id} className="px-3 my-1">
+                    <EachItem {...Item}  index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
                       onProductClicked={this.onProductClicked} />
                   </Col>)
               }
@@ -270,8 +270,8 @@ export class ListItems extends React.Component {
               {
                 TotalCurrentItems !== 0
                 && CurrentItems.map((Item, index) =>
-                  <Col sm="4" md="3" lg="3" xs="6" className="px-3 my-1">
-                    <EachItem {...Item} key={Item._id} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
+                  <Col sm="4" md="3" lg="3" xs="6" key={Item._id} className="px-3 my-1">
+                    <EachItem {...Item} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
                       onProductClicked={this.onProductClicked} />
                   </Col>)
               }
@@ -282,8 +282,8 @@ export class ListItems extends React.Component {
               {
                 TotalCurrentItems !== 0
                 && CurrentItems.map((Item, index) =>
-                  <Col sm="4" md="3" lg="3" xs="6" className="px-3 my-1">
-                    <EachItem {...Item} key={Item._id} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
+                  <Col sm="4" md="3" lg="3" xs="6" key={Item._id} className="px-3 my-1">
+                    <EachItem {...Item} index={index} visible={classnames({ 'u-opacity-0': index > NumberOfCurrentProduct - 1 })}
                       onProductClicked={this.onProductClicked} />
                   </Col>)
               }
