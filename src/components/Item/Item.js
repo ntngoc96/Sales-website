@@ -4,6 +4,8 @@ import {
   CardTitle, CardSubtitle,
 } from 'reactstrap';
 
+import { AppContext } from '../../contexts';
+
 import classNames from 'classnames';
 export function Item(props) {
   const { visible } = props;
@@ -18,7 +20,15 @@ export function Item(props) {
         </div>
         <div className="group__button d-flex">
           <button className="group__button--font group__button--button">Chi tiết</button>
-          <button className="group__button--font group__button--button">Đặt ngay</button>
+          <AppContext.Consumer>
+            {({ addToCart }) => (
+              <button className="group__button--font group__button--button" 
+              onClick={() => addToCart(props)}>
+                Đặt ngay
+              </button>
+            )}
+          </AppContext.Consumer>
+          
         </div>
       </CardBody>
     </Card>

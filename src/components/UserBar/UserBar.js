@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import { UserService } from '../../auth/UserService';
 
+import { AppContext } from '../../contexts';
 export class UserBar extends React.Component {
   constructor() {
     super();
@@ -28,7 +29,12 @@ export class UserBar extends React.Component {
         <NavLink to='/cart/all'>Kiểm tra đơn hàng</NavLink>
       </NavItem>
       <NavItem className="user-nav__item--border-right">
-        <NavLink to='/cart'>Giỏ hàng</NavLink>
+        <AppContext.Consumer>
+          { ({CartItems}) =>(
+            <NavLink to='/cart'>Giỏ hàng ({CartItems.length})</NavLink>
+            )
+          }
+        </AppContext.Consumer>
       </NavItem>
       <NavItem className="user-nav__item--border-right">
         <NavLink to='/:id/profile'>Hello {userName}</NavLink>

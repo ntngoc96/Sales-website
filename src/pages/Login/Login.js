@@ -25,9 +25,6 @@ class Login extends Component {
     this.setState(() => { return { submitted: true } });
 
     let { aid, password } = this.state;
-    let content = '';
-    content += ' aid ' + aid;
-    content += ' pwd ' + password;
 
     
     if (!(aid && password)) {

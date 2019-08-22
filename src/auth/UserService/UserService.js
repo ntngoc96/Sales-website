@@ -1,5 +1,3 @@
-import { Redirect } from 'react-router-dom';
-
 export const UserService = {
   login,
   logout,
