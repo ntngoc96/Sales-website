@@ -18,30 +18,35 @@ import { Footer } from '../../components/Footer';
 import { Register } from '../../pages/Register';
 import { Login } from '../../pages/Login';
 import { PrivateRoute } from '../../auth/PrivateRoute';
+import { CartContext } from '../../contexts';
+import { Cart } from '../../pages/Cart';
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <header>
-          <UserBar />
-          <NavBar />
-        </header>
-        <main>
-          <Route exact path="/" component={Home} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/introduction" component={Introduction} />
-          <Route path="/news" component={News} />
-          <Route path="/product" component={Product} />
-          <Route path="/promotion" component={Promotion} />
-          <PrivateRoute path="/add-product" component={AddProduct} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-        </main>
-        <footer className="footer">
-          <Footer />
-        </footer>
+        <CartContext>
+          <header>
+            <UserBar className="position-fixed" />
+            <NavBar />
+          </header>
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/introduction" component={Introduction} />
+            <Route path="/news" component={News} />
+            <Route path="/product" component={Product} />
+            <Route path="/promotion" component={Promotion} />
+            <PrivateRoute path="/api/add-product" component={AddProduct} />
+            <PrivateRoute path="/cart" component={Cart} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+          </main>
+          <footer className="footer">
+            <Footer />
+          </footer>
+        </CartContext>
       </Router>
     </div>
   );
