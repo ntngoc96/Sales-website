@@ -16,8 +16,8 @@ import Slide_5 from '../../image/featured_5.jpg';
 const items = [
   {
     src: Slide_1,
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    altText: `Chăm sóc sắc đẹp toàn diện cho bạn`,
+    caption: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
   },
   {
     src: Slide_2,
@@ -79,16 +79,22 @@ class Featured extends Component {
 
   render() {
     const { activeIndex } = this.state;
-
+    
     const slides = items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src}
+          className="featured__carousel"
         >
           <img src={item.src} className="u-width-800px-height-300px" alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={<div>
+            <div className="">{item.caption}</div>
+              <button className="btn btn-warning u-margin-top-small featured__carousel__button-animation">Xem chi tiet</button>
+            </div>}
+          className="featured__carousel-animation" captionHeader={item.altText} />
+          
         </CarouselItem>
       );
     });
@@ -98,6 +104,7 @@ class Featured extends Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
+        interval={false}
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}

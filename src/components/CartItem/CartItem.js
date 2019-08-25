@@ -6,37 +6,45 @@ import {
 } from 'reactstrap';
 import { AppContext } from '../../contexts';
 
+import Image from '../../image/cat-logo.jpg';
+
 
 const propTypes = {
 
 };
 
+function format_curency(a) {
+  return String(a).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+}
+const getPriceAfterDiscount = (oldPrice,discount = 10) => {
+  oldPrice = parseInt(oldPrice);
+  return oldPrice - oldPrice*(discount/100);
+}
 
 export class CartItem extends Component {
+  
   render() {
     return (
-      <Row>
-        <Col>
-          <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <CardTitle>{this.props.name}</CardTitle>
-              <CardSubtitle>Card subtitle</CardSubtitle>
-              <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-              <AppContext.Consumer>
-                {({ deleteFormCart }) => (
-                  <Button onClick={()=> deleteFormCart(this.props)}>Xóa sản phẩm</Button>
+      <div className="cart-item">
+        <Card className="cart-item__img">
+          <CardImg top src={Image} alt="Card image cap" />
+        </Card>
+        <Card className="cart-item__content">
+          <CardBody>
+            <CardTitle>{this.props.name}</CardTitle>
+            <CardSubtitle className="u-text-decoration-linethough text-muted u-font-size-small">{format_curency(this.props.price)}</CardSubtitle>
+            <CardSubtitle>{(format_curency(getPriceAfterDiscount(this.props.price),this.props.discount))} VNĐ</CardSubtitle>
+            
+            <AppContext.Consumer>
+              {({ deleteFormCart }) => (
+                <Button className="u-margin-top-small cart-item__button u-font-size-small btn-danger" onClick={() => deleteFormCart(this.props)}>Xóa</Button>
 
-                )}
-              </AppContext.Consumer>
+              )}
+            </AppContext.Consumer>
 
-            </CardBody>
-          </Card>
-        </Col>
-        <Col>
-          Nothing
-        </Col>
-      </Row>
+          </CardBody>
+        </Card>
+      </div>
     );
   }
 }

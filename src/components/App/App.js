@@ -20,6 +20,7 @@ import { Login } from '../../pages/Login';
 import { PrivateRoute } from '../../auth/PrivateRoute';
 import { CartContext } from '../../contexts';
 import { Cart } from '../../pages/Cart';
+import Admin from '../../pages/Admin/Admin';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/promotion" component={Promotion} />
             <PrivateRoute path="/api/add-product" component={AddProduct} />
             <PrivateRoute path="/cart" component={Cart} />
+            <PrivateRoute path="/auth/admin" component={Admin} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
           </main>

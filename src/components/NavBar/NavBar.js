@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import logo from '../../image/logo.png';
+import logo from '../../image/yellow-cat-logo.png';
 
 export class NavBar extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export class NavBar extends React.Component {
           <Col>
             <Nav>
               <NavItem>
-                <img src={logo} width="65" alt="logo" />
+                <img src={logo} width="100" alt="logo" />
               </NavItem>
             </Nav>
           </Col>
