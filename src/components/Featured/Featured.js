@@ -89,10 +89,10 @@ class Featured extends Component {
           className="featured__carousel"
         >
           <img src={item.src} className="u-width-800px-height-300px" alt={item.altText} />
-          <CarouselCaption captionText={<div>
-            <div className="">{item.caption}</div>
+          <CarouselCaption captionText={<span>
+            <span className="">{item.caption}</span>
               <button className="btn btn-warning u-margin-top-small featured__carousel__button-animation">Xem chi tiet</button>
-            </div>}
+            </span>}
           className="featured__carousel-animation" captionHeader={item.altText} />
           
         </CarouselItem>

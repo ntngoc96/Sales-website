@@ -31,7 +31,7 @@ export class CartContext extends Component {
     });
 
     console.log(indexExist);
-
+ 
 
 
     if (indexExist === -1) {
