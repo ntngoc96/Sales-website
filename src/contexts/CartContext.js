@@ -7,7 +7,8 @@ export class CartContext extends Component {
     super();
 
     this.state = {
-      CartItems: []
+      CartItems: [],
+      TotalPrice: 0,
     };
 
     this.addToCart = this.addToCart.bind(this);
@@ -15,11 +16,18 @@ export class CartContext extends Component {
   }
 
   addToCart(newItem) {
-    this.setState({
-      CartItems: this.state.CartItems.concat(newItem)
-    });
+    console.log(this.state.CartItems.indexOf(newItem));
+    
+
+    this.setState((state, props) => { return { 
+      CartItems: this.state.CartItems.concat(newItem),
+      TotalPrice: state.TotalPrice + parseInt(newItem.price),
+     }});
+    
 
   }
+
+  incre
 
   deleteFormCart(Item) {
 
@@ -41,7 +49,7 @@ export class CartContext extends Component {
       ...CartItems.slice(index + 1)
     ]
 
-    this.setState(() => { return { CartItems }});
+    this.setState((state) => { return { CartItems,TotalPrice: state.TotalPrice - parseInt(Item.price) }});
     
   }
 
@@ -50,6 +58,7 @@ export class CartContext extends Component {
       <AppContext.Provider
         value={{
           CartItems: this.state.CartItems,
+          TotalPrice: this.state.TotalPrice,
           addToCart: this.addToCart,
           deleteFormCart: this.deleteFormCart,
         }}

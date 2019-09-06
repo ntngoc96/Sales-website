@@ -42,6 +42,9 @@ export class UserBar extends React.Component {
       <NavItem className="user-nav__item--border-right" onClick={()=> UserService.logout()}>
         <NavLink to=''>Đăng xuất</NavLink>
       </NavItem>
+      <NavItem className="user-nav__item--border-right">
+        <NavLink to='/auth/admin'>Quản lý</NavLink>
+      </NavItem>
       
     </Nav>
   }
