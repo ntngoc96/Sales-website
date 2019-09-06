@@ -45,7 +45,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
           </main>
-          <footer className="footer">
+          <footer className="footer u-margin-top-medium">
             <Footer />
           </footer>
         </CartContext>
