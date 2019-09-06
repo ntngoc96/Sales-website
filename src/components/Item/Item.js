@@ -17,9 +17,12 @@ function format_curency(a) {
 export function Item(props) {
   const { visible } = props;
 
-  const getPriceAfterDiscount = (oldPrice,discount = 10) => {
+  const getPriceAfterDiscount = (oldPrice, discount) => {
+    console.log(`discount: ${discount}`);
+
     oldPrice = parseInt(oldPrice);
-    return oldPrice - oldPrice*(discount/100);
+    discount = parseInt(discount);
+    return oldPrice - oldPrice * (discount / 100);
   }
 
   return (
@@ -28,10 +31,20 @@ export function Item(props) {
       <CardImg top width="65" className="new__item--cardimg" src={Image} alt={props.name} />
       <CardBody className="px-0">
         <CardTitle>{props.name}</CardTitle>
-        <div className=" item__price">
-          <CardSubtitle className="u-text-decoration-linethough text-muted u-font-size-small">{format_curency(props.price)} VNĐ</CardSubtitle>
-          <CardSubtitle className="text-primary">{(format_curency(getPriceAfterDiscount(props.price),props.discount))} VNĐ</CardSubtitle>
-        </div>
+        <AppContext.Consumer>
+          {({ DiscountAll }) => {
+            if (parseInt(DiscountAll) === 0) {
+              return <div className=" item__price">
+                <CardSubtitle className={classNames("u-text-decoration-linethough text-muted u-font-size-small",{ invisible: props.discount === 0})}>{format_curency(props.price)} VNĐ</CardSubtitle>
+                <CardSubtitle className="text-primary">{(format_curency(getPriceAfterDiscount(props.price, props.discount)))} VNĐ</CardSubtitle>
+              </div>
+            } else {
+              return <CardSubtitle className="text-primary">{(format_curency(getPriceAfterDiscount(props.price, parseInt(DiscountAll))))} VNĐ</CardSubtitle>
+            }
+          }
+          }
+
+        </AppContext.Consumer>
         <div className="group__button d-flex">
           <button className="group__button--font group__button--button new__item--button">Chi tiết</button>
           <AppContext.Consumer>

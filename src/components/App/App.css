@@ -146,10 +146,16 @@ body{
   font-size:.75rem !important;
 }
 
+.u-margin-bottom-small{
+  margin-bottom: 1rem; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-small {
+      margin-bottom: .5rem; } }
+
 .u-margin-bottom-medium{
   margin-bottom: 2rem; }
   @media (max-width: 56.25em) {
-    .u-margin-bottom-big {
+    .u-margin-bottom-medium {
       margin-bottom: 1rem; } }
 
 .u-margin-bottom-big {
@@ -497,45 +503,76 @@ body{
         .story__row {
           max-width: 50rem;
           padding: 0 3rem; } }
-  .heading-tertiary{
-    
-  }
 
 /* CartItem Component */
-
-.cart-item{
-  display:flex;
-}
-
-.cart-item__img{
-  width:10rem;
-  height:10rem;
-
-  border-radius: 50%;
-
-
-}
-
-.cart-item .cart-item__content{
-  position: relative;
-
-  min-width: 65%;
-
-  text-align: left;
-}
-
-  .cart-item__content .cart-item__button{
-    position: absolute;
-    top:0%;
-    right:3%;
-
-    
+  /* Cart left */
+  .cart-item{
+    display:flex;
+    align-items:center;
   }
 
-.cart-item__button{
-  text-align: right;
-}
+  .cart-item__img{
+    width:10rem;
+    height:10rem;
+
+    border-radius: 50%;
+
+
+  }
+
+  .cart-item .cart-item__content{
+    position: relative;
+
+    min-width: 65%;
+
+    text-align: left;
+  }
+
+    .cart-item__content .cart-item--button{
+      position: absolute;
+      top:0%;
+      right:3%;
+
+      
+    }
+
+    .cart-item__group--button-left,.cart-item__group--button-right{
+      background-color: transparent;
+      
+      border:1px solid lightgray;
+    }
+
+    .cart-item__group--button:focus{
+      outline:none;
+    }
+
+    .cart-item__group--span{
+      padding:.25rem;
+
+      margin: auto .5rem;
+    }
+
+  .cart-item__button{
+    text-align: right;
+  }
     
+  /* Cart right */
+
+  .cart__right{
+    padding: 1rem;
+
+  }
+
+  .cart__right table th,.cart__right table td{
+    border-top:none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .cart__right table th:first-child, .cart__right table td:first-child{
+    text-align: left;
+  }
+
+  
 
 /* Cart Pages */
 
