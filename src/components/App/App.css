@@ -14,7 +14,12 @@ html {
     html {
       font-size: 75%; } }
 
-
+:root {
+  --color-1: #eaeaea;
+  --color-2: #2dedbd;
+  --color-3: #494949;
+}
+      
 
 .App-header {
   background-color: #282c34;
@@ -31,13 +36,47 @@ html {
   color: #61dafb;
 }
 
+.header{
+  position: relative;
+}
+
+/* UserBar */
+
+.user-navigation{
+  position: fixed;
+  left:0;
+  top:0;
+
+  width:100%;
+  height:3.5rem;
+
+  background-color: #ad8a28;
+
+  z-index: 9999;
+}
+
+.user-nav__item > a{
+  color: white ;
+
+  transition: 200ms;
+}
+
+.user-nav__item > a:hover{
+  text-decoration: none;
+
+  background-color: white;
+
+  color:#ad8a28;
+
+  transform: scale(1.1)
+}
 
 .user-nav__color{
-  color: #b9b9b9 !important;
+  
 }
 
 .user-nav__font{
-  font-size:.8rem;
+  font-size:1rem;
 }
 
 .user-nav__border{
@@ -55,34 +94,6 @@ html {
 
 .nav-link{
   color: inherit !important;
-}
-
-body{
-  /* background-color: #000 !important; */
-}
-
-.red{
-  background-color: red;
-  /* width:200px;
-  height:200px; */
-  width:33.33%;
-  display: inline-block;
-}
-
-.green{
-  background-color: green;
-  /* width:200px;
-  height:200px; */
-  width:33.33%;
-  display: inline-block;
-}
-
-.blue{
-  background-color: blue;
-  /* width:200px;
-  height:200px; */
-  width:33.33%;
-  display: inline-block;
 }
 
 /* SECTION */
@@ -115,6 +126,15 @@ body{
   background-position: center;
 }
 /* HOMEPAGE */
+
+  /* Navbar */
+.navigation{
+  margin-top:3.5rem;
+
+  padding:0rem 5rem;
+
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -131,7 +151,83 @@ body{
 .nav>li>a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
+}
+
+.navigation_nav{
+  display:flex;
+  align-items: center;
+}
+
+.nav__logo{
+  float:left;
+}
+
+.nav__service{
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+}
+
+.nav__link{
+  text-transform: uppercase;
+
+  color:#727272;
+
+  transition:200ms;
+}
+.service__group{
+  width:200%;
+
+  position: absolute;
+  top:100%;
+  left:0;
+
+  text-align: left;
+  text-transform: none;
+
+  background-color: white;
+
+  z-index:9999;
+
+  border:1px solid lightgray;
+  border-collapse: collapse;
+
+  display: none;
+
+}
+
+.nav__service:hover .service__group{
+  display:block;
+
+  animation: moveBottom 1s ease 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.service__item{
+  width:100%;
+
+  padding: 1rem 1.5rem;
+
+  border-bottom:1px solid lightgray;
+
+  transition: 200ms;
+
+  
+}
+
+.nav__service .service__item:hover{
+  background-color:lightgray;
+
+  color:#c0a562da;
+
+
+}
+
+.nav__item:hover > .nav__link, .nav__item:hover .nav__service .nav__link{
+  text-decoration: none;
+
+  color:#c0a562da;
 }
 
 .footer{
@@ -139,7 +235,7 @@ body{
   
   background-color: #faffd9a9;
   
-
+/* utility class */
 
 }
 .u-font-size-small{
@@ -198,6 +294,44 @@ body{
   color: rgb(29, 202, 255)
 }
 /* Featured Component */
+
+.featured{
+  height:50rem;
+
+  position: relative;
+}
+
+.featured__text{
+  position: absolute;
+  top:50%;
+  left:30%;
+  transform: translate(-50%,-50%);
+
+  text-align: left;
+
+  width:30%;
+
+}
+
+.featured__text--main{
+  color: #fabf2b;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  font-size:2rem;
+
+}
+
+.featured__image{
+  width:100%;
+}
+
+.featured__button{
+  color:white !important  ;
+}
+
 .u-width-800px-height-300px{
   width:1000px;
   height:400px;
@@ -237,6 +371,22 @@ body{
   border-radius: 10px !important;
 
   border-color: rgb(233, 233, 233) !important;
+  
+  overflow: hidden;
+
+}
+
+.new__item-discount{
+  width: 100%;
+  height: 5%;
+
+  position: absolute;
+  top: 6%;
+  left: -35%;
+  
+  transform: rotate(-43deg);
+
+  border:1px solid #ffd772;
 }
 
 .card-title{
@@ -608,7 +758,7 @@ body{
             margin-bottom: 2rem; } }
       @media (max-width: 56.25em) {
         .story__row {
-          max-width: 50rem;
+          /* max-width: 50rem; */
           padding: 0 3rem; } }
 
 /* CartItem Component */
@@ -707,18 +857,94 @@ body{
 
 /* ANIMATION */
 
-.featured__carousel .featured__carousel-animation{
+.featured__carousel-animation{
   animation: moveLeft 1s ease 0.75s;
     animation-fill-mode: backwards;
 
 }
-.featured__carousel .featured__carousel__button-animation{
+.featured__carousel__button-animation{
   animation: moveBottom 1s ease 0.75s;
     animation-fill-mode: backwards;
 
 }
 
+/* FlyToCart Css */
 
+.flyingBtn {
+  z-index: 9999;
+  transform-origin: center bottom;
+  transform: scale(1);
+
+  border-radius: 100px;
+}
+
+#header-shop #cart button {
+  font-size: 1.5rem;
+  height: 100%;
+  color: var(--color-2);
+  background: rgba(0, 0, 0, 0.2);
+  width: 2em;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2) inset;
+}
+
+#header-shop #cart button[data-count]::after {
+  content: attr(data-count);
+  display: block;
+  position: absolute;
+  font-size: 0.7rem;
+  background: var(--color-3);
+  color: var(--color-2);
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0 0.25em;
+  right: 5%;
+  bottom: 5%;
+}
+
+#header-shop #cart button[data-count].addedCount::after {
+  animation-name: shakeUp;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+
+[data-addToCart] {
+  background: var(--color-2);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  outline: none;
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
+}
+
+[data-addToCart]:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@keyframes shakeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes moveBottom {
   0% {
@@ -738,3 +964,4 @@ body{
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
