@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Sales-website/static/css/main.cf676543.chunk.css",
+    "main.js": "/Sales-website/static/js/main.43900e89.chunk.js",
+    "main.js.map": "/Sales-website/static/js/main.43900e89.chunk.js.map",
+    "runtime~main.js": "/Sales-website/static/js/runtime~main.8a74aad6.js",
+    "runtime~main.js.map": "/Sales-website/static/js/runtime~main.8a74aad6.js.map",
+    "static/css/2.22dd386b.chunk.css": "/Sales-website/static/css/2.22dd386b.chunk.css",
+    "static/js/2.645a028b.chunk.js": "/Sales-website/static/js/2.645a028b.chunk.js",
+    "static/js/2.645a028b.chunk.js.map": "/Sales-website/static/js/2.645a028b.chunk.js.map",
+    "index.html": "/Sales-website/index.html",
+    "precache-manifest.df90c13fc6b7058bbb061ea3ca91f00a.js": "/Sales-website/precache-manifest.df90c13fc6b7058bbb061ea3ca91f00a.js",
+    "service-worker.js": "/Sales-website/service-worker.js",
+    "static/css/2.22dd386b.chunk.css.map": "/Sales-website/static/css/2.22dd386b.chunk.css.map",
+    "static/css/main.cf676543.chunk.css.map": "/Sales-website/static/css/main.cf676543.chunk.css.map",
+    "static/media/App.css": "/Sales-website/static/media/10858.e6ec1c01.jpg",
+    "static/media/cat-logo.jpg": "/Sales-website/static/media/cat-logo.228b8823.jpg",
+    "static/media/certificate.jpg": "/Sales-website/static/media/certificate.0d1ca39b.jpg",
+    "static/media/featured_1.jpg": "/Sales-website/static/media/featured_1.289f563e.jpg",
+    "static/media/featured_2.jpg": "/Sales-website/static/media/featured_2.5a4e0d90.jpg",
+    "static/media/featured_3.jpg": "/Sales-website/static/media/featured_3.dbb1c35e.jpg",
+    "static/media/featured_4.jpg": "/Sales-website/static/media/featured_4.a7a5329e.jpg",
+    "static/media/featured_5.jpg": "/Sales-website/static/media/featured_5.ad7c84ef.jpg",
+    "static/media/featuredmain_1.jpg": "/Sales-website/static/media/featuredmain_1.bd3bdc73.jpg",
+    "static/media/featuredmain_2.jpg": "/Sales-website/static/media/featuredmain_2.aad14d92.jpg",
+    "static/media/logo_miumiu_spa_main.png": "/Sales-website/static/media/logo_miumiu_spa_main.36a5bdf8.png",
+    "static/media/logo_transparent.png": "/Sales-website/static/media/logo_transparent.913c9efd.png",
+    "static/media/styles.css": "/Sales-website/static/media/revicons.2feb69cc.eot",
+    "static/media/story_1.jpg": "/Sales-website/static/media/story_1.8854304a.jpg",
+    "static/media/video2.mov": "/Sales-website/static/media/video2.a345e40a.mov"
+  }
+}
