@@ -28,8 +28,8 @@ function App() {
     <div className="App">
       <Router>
         <CartContext>
-          <header>
-            <UserBar className="position-fixed" />
+          <header className="header">
+            <UserBar />
             <NavBar />
           </header>
           <main>

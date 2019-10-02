@@ -1,8 +1,10 @@
 import React from 'react';
 import Axios from 'axios';
+import ReactLoading from 'react-loading';
 
 
-import { Featured } from '../../components/Featured';
+import { FeaturedMain } from '../../components/Featured';
+// import { Featured } from '../../components/Featured';
 import { New } from '../../components/New';
 import { ListItems } from '../../components/ListItems';
 import { Story } from '../../components/Story';
@@ -11,6 +13,7 @@ import { Story } from '../../components/Story';
 import certificate from "../../image/certificate.jpg";
 import ListSpaServices from '../../components/ListSpaServices/ListSpaServices';
 
+let cartRef;
 export class Home extends React.Component {
   constructor() {
     super();
@@ -21,6 +24,8 @@ export class Home extends React.Component {
   }
 
   componentDidMount() {
+    cartRef = document.getElementById("cart");
+
     Axios.get('/api/all').then(response => {
       const { data: Items } = response;
       this.setState(() => ({
@@ -37,17 +42,18 @@ export class Home extends React.Component {
     return (
       <div>
         <section className="section-banner">
-          <Featured />
+          <FeaturedMain />
         </section>
         <section className="section-new-product">
-          <h1 className="u-margin-bottom-medium u-text-transform-uppercase">Dịch vụ mới</h1>
-          <New Items={Items} />
+          <h1 className="u-margin-bottom-big u-text-transform-uppercase">Dịch vụ mới</h1>
+          { Items.length === 0 && <ReactLoading type="spinningBubbles" className="mx-auto" color="#ffd772"  /> }
+          { Items.length !== 0 && <New Items={Items} cart={cartRef}/> }
         </section>
         <section className="section-service">
           <h1 className="u-margin-bottom-big u-text-transform-uppercase">Dịch vụ tại MiuMiu Beauty </h1>
           <ListSpaServices />
         </section>
-        <section className="section-certificate">
+        <section className="section-certificate u-margin-top-medium">
           <h1 className="u-margin-bottom-medium u-text-transform-uppercase">Chứng chỉ</h1>
           <img src={certificate} width="50%" alt="certificate" />
         </section>

@@ -6,7 +6,7 @@
 .pnp.js
 
 # custom
-/src/image
+# /src/image
 
 # testing
 /coverage
